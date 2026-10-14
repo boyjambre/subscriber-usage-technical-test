@@ -1,0 +1,19 @@
+{
+  "name": "subscriber-usage-technical-test",
+  "version": "1.0.0",
+  "description": "Subscriber Usage API and CSV snapshot automation technical test",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "snapshot:once": "node scripts/snapshot.js --once",
+    "snapshot:cron": "node scripts/snapshot.js",
+    "cleanup": "node scripts/cleanup-snapshots.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3"
+  }
+}
